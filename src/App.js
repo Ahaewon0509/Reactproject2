@@ -22,7 +22,7 @@ function App() {
           <Navbar.Brand href="#home">Navbar</Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link onClick={()=>{navigate('/')}}>Home</Nav.Link>
-            <Nav.Link onClick={()=>{navigate('/detail')}}>detail</Nav.Link>
+            <Nav.Link onClick={()=>{navigate('/detail/0')}}>detail</Nav.Link>
             <Nav.Link onClick={()=>{navigate('/about')}}>about</Nav.Link>
             <Nav.Link onClick={()=>{navigate('/about/member')}}>member</Nav.Link>
             <Nav.Link onClick={()=>{navigate('/about/location')}}>location</Nav.Link>
@@ -34,8 +34,8 @@ function App() {
         </Container>
       </Navbar>
 
-      {/* <Link to='/'>홈</Link>
-      <Link to='/detail'>상세페이지</Link> */}
+      <Link to='/'>홈</Link>
+      <Link to='/detail'>상세페이지</Link>
 
       {/* Routes가 반드시 Route를 감싸야 함 */}
       <Routes> 
@@ -55,12 +55,15 @@ function App() {
           </div>
           </>
         } />
-        <Route path='/detail' element={<Detail/>} />
+        {/* <Route path='/detail' element={<Detail items={items}/>} /> 프롭스 */}
         <Route path='*' element={<div>404에러 페이지입니다.</div>} />
         <Route path='/about' element={<About />}>
           <Route path='member' element={<div>멤버들</div>} /> {/* 소메뉴들 */}
           <Route path='location' element={<div>회사위치</div>} />
         </Route>
+        <Route path='/detail/:id' element={<Detail items={items} />} />
+
+
       </Routes>
         
     </div>
