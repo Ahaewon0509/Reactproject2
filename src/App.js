@@ -1,6 +1,7 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { Navbar, Container, Nav } from 'react-bootstrap';
 import { Routes, Route, Link, useNavigate, Outlet } from 'react-router-dom';
+import styled from 'styled-components';
 import './App.css';
 import img_01 from './banner.webp';
 import data from './data.js';
@@ -8,6 +9,29 @@ import List from './Component/List.js';
 import Detail from './pages/Detail.js';
 import About from './pages/About.js';
 
+let RedBtn = styled.button`
+  background-color : ${props=>props.bg};
+  color : ${props=>props.bg == 'red' ? '#fff' : '#000'};
+  // 배경색이 레드면 컬러가 화이트, 아니면 블랙
+  padding : 10px;
+`
+
+let Box = styled.div`
+  background-color : #333;
+  padding : 30px;
+`
+
+// class App extends React.Comment{
+//   CommentDidMount(){
+//     // 마운트 될때 코드 실행
+//   }
+//   CommentDidUpdate(){
+//     //업데이트 될때 코드 실행
+//   }
+//   CommentWillUnMount(){
+//     // 언마운트 될때 코드 실행
+//   }
+// }
 
 function App() {
 
@@ -16,6 +40,12 @@ function App() {
 
   return (
     <div className="App">
+
+
+      <Box>
+        <RedBtn bg="#ff0000">버튼</RedBtn>
+        <RedBtn bg="#ccc">버튼</RedBtn>
+      </Box>
 
       <Navbar bg="dark" variant="dark">
         <Container>
