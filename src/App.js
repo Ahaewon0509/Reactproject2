@@ -8,6 +8,7 @@ import data from './data.js';
 import List from './Component/List.js';
 import Detail from './pages/Detail.js';
 import About from './pages/About.js';
+import axios from 'axios';
 
 let RedBtn = styled.button`
   background-color : ${props=>props.bg};
@@ -33,6 +34,8 @@ let Box = styled.div`
 //   }
 // }
 
+let count = 0;
+
 function App() {
 
   let [items, setItems] = useState(data);
@@ -40,7 +43,6 @@ function App() {
 
   return (
     <div className="App">
-
 
       <Box>
         <RedBtn bg="#ff0000">버튼</RedBtn>
@@ -83,6 +85,20 @@ function App() {
               }
             </div>
           </div>
+          {
+            count < 1 ? 
+            <button onClick={()=>{
+              count = count + 1;
+              axios.get('https://6c3fac62-d531-4787-a6d9-e01d76badde1.mock.pstmn.io/productList')
+              .then((result)=>{
+                let copyItem = [...items, ...result.data];
+                setItems(copyItem);
+              }).catch(()=>{
+                console.log("통신실패")
+              })
+            }}>MORE</button> : null
+          }
+
           </>
         } />
         {/* <Route path='/detail' element={<Detail items={items}/>} /> 프롭스 */}
