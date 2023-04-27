@@ -44,10 +44,10 @@ function App() {
   return (
     <div className="App">
 
-      <Box>
+      {/* <Box>
         <RedBtn bg="#ff0000">버튼</RedBtn>
         <RedBtn bg="#ccc">버튼</RedBtn>
-      </Box>
+      </Box> */}
 
       <Navbar bg="dark" variant="dark">
         <Container>
@@ -66,8 +66,8 @@ function App() {
         </Container>
       </Navbar>
 
-      <Link to='/'>홈</Link>
-      <Link to='/detail'>상세페이지</Link>
+      {/* <Link to='/'>홈</Link>
+      <Link to='/detail'>상세페이지</Link> */}
 
       {/* Routes가 반드시 Route를 감싸야 함 */}
       <Routes> 
@@ -102,7 +102,7 @@ function App() {
           </>
         } />
         {/* <Route path='/detail' element={<Detail items={items}/>} /> 프롭스 */}
-        <Route path='*' element={<div>404에러 페이지입니다.</div>} />
+        {/* <Route path='*' element={<div>404에러 페이지입니다.</div>} /> */}
         <Route path='/about' element={<About />}>
           <Route path='member' element={<div>멤버들</div>} /> {/* 소메뉴들 */}
           <Route path='location' element={<div>회사위치</div>} />
