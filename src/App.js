@@ -207,7 +207,7 @@ function App() {
               <Card>
                 <Card.Img variant="top" className='productImg2' />
                   <Card.Body>
-                    <Card.Title>나이기 덩크</Card.Title>
+                    <Card.Title>나이키 덩크</Card.Title>
                     <Card.Link href="#" className='okBtn'>구매하기</Card.Link>
                   </Card.Body>
               </Card>

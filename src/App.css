@@ -104,6 +104,9 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light{
   font-size: 15px;
   font-weight: 500;
 }
+.logo svg.pre-logo-svg:hover{
+  color: #8d8d8d;
+}
 /* 검색창 */
 #searchForm{}
 #searchForm{}
@@ -261,6 +264,7 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light{
   width: 100%;
   max-width: 1650px;
   margin: 0 auto;
+  padding-bottom: 150px;
 }
 .productBanner .productImg{
   background-image: url('../public/img/product_banner01.webp');
@@ -277,7 +281,7 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light{
   position: relative;
 }
 .productBanner .card-group{
-  gap: 35px;
+  gap: 25px;
 }
 .productBanner h2{
   text-align: left;
@@ -289,7 +293,32 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light{
   width: 45%;
   bottom: 0;
   left: 0;
+  text-align: left;
+  padding: 16px 16px 50px 50px;
 }
-.productBanner{}
-.productBanner{}
-.productBanner{}
+.productBanner .card-title{
+  font-size: 1.2em;
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+.productBanner .okBtn{
+  display: block;
+  font-size: 0.8em;
+  padding: 7px 5px;
+  width: 85px;
+  text-align: center;
+  background: #fff;
+  font-weight: bold;
+  border-radius: 30px;
+  transition: 0.3s;
+}
+.productBanner .okBtn:hover{
+  background: #b2b2b2;
+  color: #111;
+}
+.productBanner .card{
+  border: none;
+  --bs-card-inner-border-radius: none;
+  border-color: transparent;
+}
