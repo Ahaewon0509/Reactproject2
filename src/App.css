@@ -1,3 +1,16 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+ul,ol,dl{
+  list-style: none;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+a{
+  text-decoration: none;
+  color: #000;
+}
 .App {
   text-align: center;
 }
@@ -38,4 +51,90 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* 메뉴 부분 */
+.logo{
+  width: 100px;
+  height: 60px;
+}
+.utillMenu{
+  background: #f5f5f5;
+}
+.utillMenu ul{
+  display: flex;
+  justify-content: end;
+  padding-right: 50px;
+}
+.utillMenu ul li{}
+.utillMenu ul li a{
+  display: block;
+  line-height: 15px;
+  font-size: 12px;
+  margin: 10px 0 10px 0;
+  font-weight: 600;
+  padding: 0 15px 0 15px;
+}
+.utillMenu ul li:nth-child(1) a,
+.utillMenu ul li:nth-child(2) a,
+.utillMenu ul li:nth-child(3) a{
+  border-right: 1px solid #000;
+}
+.navbar>.container-fluid{
+  width: 1750px;
+  margin: 0 auto;
+  /* padding: 0 65px; */
+}
+.navbar-expand-lg .navbar-nav{
+  margin: 0 auto;
+  width: 100%;
+  max-width: 625px;
+}
+nav.navbar.navbar-expand-lg.navbar-light.bg-light{
+  padding: 0;
+  height: 100%;
+}
+.nav-link{
+  width: 125px;
+}
+.navText{
+  color: #111 !important;
+  font-size: 20px;
+}
+/* 검색창 */
+#searchForm{}
+#searchForm{}
+#searchForm{}
+.form-control{
+  background-color: #f5f5f5;
+  border-radius: 50px;
+}
+.form-control:hover{
+  background-color: #e5e5e5;
+}
+.form-control:focus{
+  border-color: transparent;
+  box-shadow: none;
+}
+/* 좋아요, 장바구니 아이콘 */
+.likeIcon{
+  margin-left: 40px;
+}
+.likeIcon ul{
+  display: flex;
+  gap: 15px;
+}
+.likeIcon ul li{}
+.likeIcon ul li a{}
+.likeIcon{}
+.likeIcon{}
+
+/* 소식 배너 부분 */
+.carousel{
+  background: #fff4f4;
+  box-shadow: inset 0 -1px 0 0 #e5e5e5;
+}
+/* 배너 네비게이션 아이콘 */
+.carousel-indicators{
+  display: none;
 }
