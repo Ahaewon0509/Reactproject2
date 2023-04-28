@@ -15,10 +15,12 @@ a{
   text-align: center;
 }
 .main_banner{
-  height: 300px;
-  /* background-image: url('../public/img/banner.webp'); */
+  width: 100%;
+  height: 100vh;
+  background-image: url('../public/img/banner2.webp');
   background-size: cover;
   background-position: center;
+  margin-bottom: 105px;
 }
 .item-img{
   width: 80%;
@@ -59,7 +61,7 @@ a{
   height: 60px;
 }
 .utillMenu{
-  background: #f5f5f5;
+  background: #f0f0f0;
 }
 .utillMenu ul{
   display: flex;
@@ -81,33 +83,46 @@ a{
   border-right: 1px solid #000;
 }
 .navbar>.container-fluid{
-  width: 1750px;
+  width: 1650px;
   margin: 0 auto;
   /* padding: 0 65px; */
 }
 .navbar-expand-lg .navbar-nav{
   margin: 0 auto;
   width: 100%;
-  max-width: 625px;
+  max-width: 475px;
 }
 nav.navbar.navbar-expand-lg.navbar-light.bg-light{
   padding: 0;
   height: 100%;
 }
 .nav-link{
-  width: 125px;
+  width: 95px;
 }
 .navText{
   color: #111 !important;
-  font-size: 20px;
+  font-size: 15px;
+  font-weight: 500;
 }
 /* 검색창 */
 #searchForm{}
 #searchForm{}
-#searchForm{}
+#searchForm svg{
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 8px;
+  left: 8px;
+  color: #000;
+}
+.d-flex{
+  position: relative;
+  width: 90%;
+}
 .form-control{
-  background-color: #f5f5f5;
+  background-color: #f0f0f0;
   border-radius: 50px;
+  border: none;
 }
 .form-control:hover{
   background-color: #e5e5e5;
@@ -116,25 +131,165 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light{
   border-color: transparent;
   box-shadow: none;
 }
+
+.btn:hover{
+  border-radius: 50%;
+  background: #e5e5e5;
+}
+.btn-outline-success{
+  --bs-btn-border-color: none;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.me-2{
+  margin-right: 0 !important;
+}
+#searchForm input{
+  padding: 6px 0 6px 50px;
+}
 /* 좋아요, 장바구니 아이콘 */
 .likeIcon{
-  margin-left: 40px;
+
 }
 .likeIcon ul{
   display: flex;
   gap: 15px;
 }
 .likeIcon ul li{}
-.likeIcon ul li a{}
+.likeIcon ul li a{
+  display: block;
+  padding: 5px;
+  border-radius: 50%;
+}
+.likeIcon ul li a:hover{
+  background: #e5e5e5;
+  color: #000;
+}
 .likeIcon{}
 .likeIcon{}
 
 /* 소식 배너 부분 */
 .carousel{
-  background: #fff4f4;
+  background: #f0f0f0;
   box-shadow: inset 0 -1px 0 0 #e5e5e5;
+}
+.carousel-item{
+  transition: transform 3s ease-in-out;
+}
+.bannerTit h4{
+  font-size: 0.85em;
+  line-height: 25px;
+  margin-top: 10px;
+  margin-bottom: 0;
+  font-weight: bold;
+}
+.bannerTit ul li a{
+  display: block;
+  font-size: 0.7em;
+  text-decoration: underline;
+  line-height: 20px;
+  margin-bottom: 4px;
 }
 /* 배너 네비게이션 아이콘 */
 .carousel-indicators{
   display: none;
 }
+.carousel-control-next-icon, .carousel-control-prev-icon{
+  width: 1rem;
+  height: 1rem;
+}
+
+/* 메인페이지 이벤트 텍스트 부분 1 */
+#cardGroup{
+  border: none;
+  margin-bottom: 115px;
+}
+#cardGroup .cardTit01{
+  font-size: 0.95em;
+  font-weight: 600;
+}
+#cardGroup .cardTit02{
+  font-size: 3em;
+  font-weight: 700;
+  line-height: 47px;
+  margin-bottom: 45px;
+}
+#cardGroup .cardSubTit{
+  font-size: 0.93em;
+  line-height: 26px;
+  font-weight: 600;
+}
+#cardGroup .linkBtns{
+  display: flex;
+  justify-content: center;
+  padding: 45px 0 45px 0;
+}
+#cardGroup .linkBtns .btns01{
+  display: block;
+  padding: 10px 25px;
+  background: #111;
+  color: #fff;
+  font-size: 0.9em;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+#cardGroup .linkBtns .btns01:hover{
+  background: #757575;
+}
+#cardGroup .linkBtns .btns02{
+  display: block;
+  padding: 10px 25px;
+  background: #111;
+  color: #fff;
+  font-size: 0.9em;
+  border-radius: 30px;
+  transition: 0.3s;
+  font-weight: 600;
+}
+#cardGroup .linkBtns .btns02:hover{
+  background: #757575;
+}
+#cardGroup{}
+
+/* 메인 상품 배너 */
+.productBanner{
+  width: 100%;
+  max-width: 1650px;
+  margin: 0 auto;
+}
+.productBanner .productImg{
+  background-image: url('../public/img/product_banner01.webp');
+  width: 100%;
+  height: 80vh;
+  background-size: cover;
+  position: relative;
+}
+.productBanner .productImg2{
+  background-image: url('../public/img/product_banner02.webp');
+  width: 100%;
+  height: 80vh;
+  background-size: cover;
+  position: relative;
+}
+.productBanner .card-group{
+  gap: 35px;
+}
+.productBanner h2{
+  text-align: left;
+  font-size: 1.9em;
+  margin-bottom: 25px;
+}
+.productBanner .card-body{
+  position: absolute;
+  width: 45%;
+  bottom: 0;
+  left: 0;
+}
+.productBanner{}
+.productBanner{}
+.productBanner{}

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Navbar, Container, Nav, Button, Form, Carousel } from 'react-bootstrap';
+import { Navbar, Container, Nav, Button, Form, Carousel, Card, CardGroup } from 'react-bootstrap';
 import { Routes, Route, Link, useNavigate, Outlet } from 'react-router-dom';
 import styled from 'styled-components';
 import './App.css';
@@ -58,7 +58,7 @@ function App() {
       </div>
       <Navbar variant="light" bg="light" expand="lg">
         <Container fluid>
-          <Navbar.Brand href="#home">
+          <Navbar.Brand href="#" onClick={()=>{navigate('/')}}>
             <div className='logo'>
               <svg aria-hidden="true" class="pre-logo-svg" focusable="false" viewBox="0 0 24 24" role="img" width="100%" height="100%" fill="none"><path fill="currentColor" fill-rule="evenodd" d="M21 8.719L7.836 14.303C6.74 14.768 5.818 15 5.075 15c-.836 0-1.445-.295-1.819-.884-.485-.76-.273-1.982.559-3.272.494-.754 1.122-1.446 1.734-2.108-.144.234-1.415 2.349-.025 3.345.275.2.666.298 1.147.298.386 0 .829-.063 1.316-.19L21 8.719z" clip-rule="evenodd"></path></svg>
             </div>
@@ -68,11 +68,11 @@ function App() {
             <Navbar.Collapse id="navbarScroll">
               
               <Nav className="me-auto my-2 my-lg-0" style={{ maxHeight: '120px' }} navbarScroll>
-                <Nav.Link onClick={()=>{navigate('/')}} className='navText'>main</Nav.Link>
-                <Nav.Link onClick={()=>{navigate('/detail/0')}} className='navText'>detail</Nav.Link>
-                <Nav.Link onClick={()=>{navigate('/about')}} className='navText'>about</Nav.Link>
-                <Nav.Link onClick={()=>{navigate('/about/member')}} className='navText'>member</Nav.Link>
-                <Nav.Link onClick={()=>{navigate('/about/location')}} className='navText'>location</Nav.Link>
+                <Nav.Link onClick={()=>{navigate('/')}} className='navText'>Main</Nav.Link>
+                <Nav.Link onClick={()=>{navigate('/detail/0')}} className='navText'>Detail</Nav.Link>
+                <Nav.Link onClick={()=>{navigate('/about')}} className='navText'>About</Nav.Link>
+                <Nav.Link onClick={()=>{navigate('/about/member')}} className='navText'>Member</Nav.Link>
+                <Nav.Link onClick={()=>{navigate('/about/location')}} className='navText'>Location</Nav.Link>
                 {/* <Nav.Link onClick={()=>{navigate('-1')}}>이전</Nav.Link>
                 <Nav.Link onClick={()=>{navigate('1')}}>다음</Nav.Link> */}
                 {/* <Nav.Link onClick={()=>{navigate('2')}}>앞으로 두번 이동</Nav.Link>
@@ -88,7 +88,12 @@ function App() {
                     className="me-2"
                     aria-label="Search"
                   />
-                  <Button variant="outline-success">Search</Button>
+                  <Button variant="outline-success">
+                  <svg aria-hidden="true" class="pre-nav-design-icon" focusable="false" viewBox="0 0 24 24" role="img" width="24px" height="24px" fill="none">
+                    <path stroke="currentColor" stroke-width="1.5" d="M13.962 16.296a6.716 6.716 0 01-3.462.954 6.728 6.728 0 01-4.773-1.977A6.728 6.728 0 013.75 10.5c0-1.864.755-3.551 1.977-4.773A6.728 6.728 0 0110.5 3.75c1.864 0 3.551.755 4.773 1.977A6.728 6.728 0 0117.25 10.5a6.726 6.726 0 01-.921 3.407c-.517.882-.434 1.988.289 2.711l3.853 3.853">
+                      </path>
+                      </svg>
+                  </Button>
                 </Form>
               </div>
 
@@ -117,7 +122,7 @@ function App() {
       {/* 이벤트 작은 배너 */}
       <Carousel variant="dark">
       <Carousel.Item>
-        <div>
+        <div className='bannerTit'>
             <ul>
               <li>
                 <h4>멤버즈데이즈 (5/1~5/7) 안내</h4>
@@ -136,7 +141,7 @@ function App() {
         </Carousel.Caption> */}
       </Carousel.Item>
       <Carousel.Item>
-      <div>
+      <div className='bannerTit'>
           <ul>
             <li>
               <h4>반품 및 환불 지연 안내</h4>
@@ -163,7 +168,52 @@ function App() {
       <Routes> 
         <Route path='/' element={
           <>
-          <div className='main_banner' style={{backgroundImage : 'url('+ img_01 +')'}}></div>
+          {/* 메인 배너 */}
+          <div className='main_banner'></div>
+          {/* <div className='main_banner' style={{backgroundImage : 'url('+ img_01 +')'}}></div> */}
+          
+          {/* 이벤트 텍스트 부분 */}
+          <Card id='cardGroup'>
+            <Card.Body>
+              <Card.Title className='cardTit01'>05.01(월) - 05.07(일)</Card.Title>
+              <Card.Title className='cardTit02'>MENBER DAYS</Card.Title>
+                <Card.Text className='cardSubTit'>
+                  나이키닷컴, 나이키 앱 그리고 매장에서 7일간 진행되는 멤버데이즈에 여러분을 초대합니다.<br/>
+                  오직 나이키 멤버만을 위한 다양한 혜택으로 온 가족이 함께 스포츠를 즐겨보세요.
+                </Card.Text>
+                <Card.Text className='cardSubTit'>
+                  멤버데이즈 혜택 및 이벤트 정보는 마케팅 수신에 동의한 멤버를 대상으로 제공됩니다.<br/>
+                  나이키 앱을 다운로드하고 앱에서만 만날 수 있는 전용 혜택도 놓치지 마세요.
+                </Card.Text>
+            </Card.Body>
+
+            <Card.Body className='linkBtns'>
+              <Card.Link href="#" className='btns01'>자세히 보기</Card.Link>
+              <Card.Link href="#" className='btns02'>멤버 가입 & 마케팅 수신동의</Card.Link>
+            </Card.Body>
+          </Card>
+          
+          {/* 상품 배너 부분 */}
+          <div className='productBanner'>
+            <h2>Trending Now</h2>
+            <CardGroup>
+              <Card>
+                <Card.Img variant="top" className='productImg' />
+                  <Card.Body>
+                    <Card.Title>에어 포스 1</Card.Title>
+                    <Card.Link href="#" className='okBtn'>구매하기</Card.Link>
+                  </Card.Body>
+              </Card>
+              <Card>
+                <Card.Img variant="top" className='productImg2' />
+                  <Card.Body>
+                    <Card.Title>나이기 덩크</Card.Title>
+                    <Card.Link href="#" className='okBtn'>구매하기</Card.Link>
+                  </Card.Body>
+              </Card>
+            </CardGroup>
+          </div>
+
           <div className="container">
             <div className="row">
               {
