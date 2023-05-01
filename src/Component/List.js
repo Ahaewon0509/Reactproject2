@@ -8,7 +8,7 @@ const List = (props) => {
     // navigate를 임포트 시켜야 onClick을 쓸 수 있음
     return(
         <div className="col-md-4" onClick={()=>{navigate('/detail/'+props.i)}}>
-            <img className='item-img' src={process.env.PUBLIC_URL + '/img/img0'+props.i+'.webp'} />
+            <img className='item-img' src={process.env.PUBLIC_URL + '/img/item0'+props.i+'.webp'} />
             <h4>{props.items.title}</h4>
             <p>{props.items.content}</p>
         </div>

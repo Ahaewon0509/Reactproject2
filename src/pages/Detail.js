@@ -43,7 +43,7 @@ const Detail = (props) => {
             }
                 <div className="row">
                     <div className="col-md-6">
-                        <img src={process.env.PUBLIC_URL + '/img/img0'+props.items[id].id+'.webp'} alt="" />
+                        <img src={process.env.PUBLIC_URL + '/img/item0'+props.items[id].id+'.webp'} alt="" />
                     </div>
                     <div className="col-md-6">
                         <h4 className="pt-5">{props.items[id].title}</h4>

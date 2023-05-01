@@ -209,7 +209,7 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light{
 /* 메인페이지 이벤트 텍스트 부분 1 */
 #cardGroup{
   border: none;
-  margin-bottom: 115px;
+  margin-bottom: 125px;
 }
 #cardGroup .cardTit01{
   font-size: 0.95em;
@@ -264,7 +264,7 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light{
   width: 100%;
   max-width: 1650px;
   margin: 0 auto;
-  padding-bottom: 150px;
+  padding: 150px 0 150px 0;
 }
 .productBanner .productImg{
   background-image: url('../public/img/product_banner01.webp');
@@ -322,3 +322,167 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light{
   --bs-card-inner-border-radius: none;
   border-color: transparent;
 }
+
+/* 상품 슬라이드 부분  */
+#productContainer .swiper {
+  width: 100%;
+  /* height: 100%; */
+}
+
+#productContainer .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#productContainer .swiper-wrapper{
+  height: 765px !important;
+  align-items: center;
+}
+#productContainer .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#productContainer .swiper-horizontal>.swiper-pagination-progressbar, .swiper-pagination-progressbar.swiper-pagination-horizontal, .swiper-pagination-progressbar.swiper-pagination-vertical.swiper-pagination-progressbar-opposite, .swiper-vertical>.swiper-pagination-progressbar.swiper-pagination-progressbar-opposite{
+  top: 93% !important;
+  background: #ebebeb;
+  height: 5px;
+}
+#productContainer .swiper-pagination-progressbar .swiper-pagination-progressbar-fill{
+  top: -3px;
+  width: 100%;
+  height: 11px;
+  background: #8c8c8c;
+}
+
+#productContainer .swiper-button-prev{
+  left: 94%;
+  top: 3%;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #e5e5e5;
+  transition: 0.4s;
+}
+#productContainer .swiper-button-next{
+  position: absolute;
+  right: 0;
+  top: 3%;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #e5e5e5;
+  transition: 0.4s;
+}
+#productContainer .swiper-button-next:hover,
+#productContainer .swiper-button-prev:hover{
+  background: #ccc;
+}
+#productContainer .swiper-button-next:after,
+#productContainer .swiper-button-prev:after{
+  display: block;
+  font-size: 15px;
+  font-weight: bold;
+  color: #111;
+}
+
+
+#productContainer{
+  width: 100%;
+  height: 100%;
+  max-width: 1650px;
+  margin: 0 auto;
+}
+
+#productContainer .row{}
+#productContainer .itemSlide{}
+#productContainer .itemSlide h3{
+  text-align: left;
+  font-size: 1.9em;
+}
+#productContainer .titGroup{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+#productContainer .itemTit{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+#productContainer .itemTit h4,
+#productContainer .itemTit h5{
+  line-height: 25px;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 3px;
+}
+
+#productContainer .titGroup p{
+  font-size: 14px;
+  color: #757575;
+}
+
+
+.container{
+  width: 100%;
+  max-width: 1650px;
+  margin: 0 auto;
+}
+.container .item-img{
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+}
+.container .col-md-4{
+  padding-left: 0;
+}
+
+/* 나이키 커뮤니티 부분 */
+#nikeComu{
+  padding: 200px 0;
+}
+#nikeComu .widthImg{
+  height: 760px;
+}
+#nikeComu .card-group{
+  width: 100%;
+  max-width: 1650px;
+  margin: 0 auto;
+  gap: 10px;
+}
+#nikeComu .nikeImg1{
+  background-image: url('../public/img/nike00.webp');
+  width: 100%;
+  height: 760px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+#nikeComu .nikeImg2{
+  background-image: url('../public/img/nike01.webp');
+  width: 100%;
+  height: 760px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+#nikeComu .nikeImg3{
+  background-image: url('../public/img/nike02.webp');
+  width: 100%;
+  height: 760px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+#nikeComu{}
+#nikeComu{}
+#nikeComu{}
+#nikeComu{}
+#nikeComu{}

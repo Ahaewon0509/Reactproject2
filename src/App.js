@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Navbar, Container, Nav, Button, Form, Carousel, Card, CardGroup } from 'react-bootstrap';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import { Routes, Route, Link, useNavigate, Outlet } from 'react-router-dom';
 import styled from 'styled-components';
 import './App.css';
@@ -9,6 +11,13 @@ import List from './Component/List.js';
 import Detail from './pages/Detail.js';
 import About from './pages/About.js';
 import axios from 'axios';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+
 
 let RedBtn = styled.button`
   background-color : ${props=>props.bg};
@@ -130,11 +139,6 @@ function App() {
                 </li>
             </ul>
         </div>
-        {/* <img
-          className="d-block w-100"
-          src="holder.js/800x400?text=First slide&bg=f5f5f5"
-          alt="First slide"
-        /> */}
         {/* <Carousel.Caption>
           <h5>First slide label</h5>
           <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
@@ -149,11 +153,6 @@ function App() {
               </li>
           </ul>
         </div>
-        {/* <img
-          className="d-block w-100"
-          src="holder.js/800x400?text=Second slide&bg=eee"
-          alt="Second slide"
-        /> */}
         {/* <Carousel.Caption>
           <h5>Second slide label</h5>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -192,6 +191,143 @@ function App() {
               <Card.Link href="#" className='btns02'>멤버 가입 & 마케팅 수신동의</Card.Link>
             </Card.Body>
           </Card>
+
+          {/* 상품 슬라이드 부분 */}
+          <div id='productContainer'>
+            <div className='row'>
+              <div className='itemSlide'>
+                <h3>Best Product</h3>
+                <>
+                <Swiper
+                  slidesPerView={3}
+                  spaceBetween={15}
+                  pagination={{
+                    type: "progressbar",
+                  }}
+                  navigation={true}
+                  modules={[Pagination, Navigation]}
+                  className="mySwiper"
+                >
+                  <SwiperSlide>
+                    <div className='product' onClick={()=>{navigate('/detail/0')}}>
+                      <div className='pro_cont'>
+                        <img className='proImgs' src={process.env.PUBLIC_URL + items[0].url} alt=""/>
+                        <div className='titGroup'>
+                          <div className='itemTit'>
+                            <h4>{items[0].title}</h4>
+                            <h5>{items[0].price}원</h5>
+                          </div>
+                          <p>{items[0].content}</p>
+                        </div>
+
+                      </div>
+                    </div>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <div className='product' onClick={()=>{navigate('/detail/1')}}>
+                      <div className='pro_cont'>
+                        <img className='proImgs' src={process.env.PUBLIC_URL + items[1].url} alt=""/>
+                        <div className='titGroup'>
+                          <div className='itemTit'>
+                            <h4>{items[1].title}</h4>
+                            <h5>{items[1].price}원</h5>
+                          </div>
+                          <p>{items[1].content}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <div className='product' onClick={()=>{navigate('/detail/2')}}>
+                      <div className='pro_cont'>
+                        <img className='proImgs' src={process.env.PUBLIC_URL + items[2].url} alt=""/>
+                        <div className='titGroup'>
+                          <div className='itemTit'>
+                            <h4>{items[2].title}</h4>
+                            <h5>{items[2].price}원</h5>
+                          </div>
+                          <p>{items[2].content}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <div className='product' onClick={()=>{navigate('/detail/3')}}>
+                      <div className='pro_cont'>
+                        <img className='proImgs' src={process.env.PUBLIC_URL + items[3].url} alt=""/>
+                        <div className='titGroup'>
+                          <div className='itemTit'>
+                            <h4>{items[3].title}</h4>
+                            <h5>{items[3].price}원</h5>
+                          </div>
+                          <p>{items[3].content}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <div className='product' onClick={()=>{navigate('/detail/4')}}>
+                      <div className='pro_cont'>
+                        <img className='proImgs' src={process.env.PUBLIC_URL + items[4].url} alt=""/>
+                        <div className='titGroup'>
+                          <div className='itemTit'>
+                            <h4>{items[4].title}</h4>
+                            <h5>{items[4].price}원</h5>
+                          </div>
+                          <p>{items[4].content}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <div className='product' onClick={()=>{navigate('/detail/5')}}>
+                      <div className='pro_cont'>
+                        <img className='proImgs' src={process.env.PUBLIC_URL + items[5].url} alt=""/>
+                        <div className='titGroup'>
+                          <div className='itemTit'>
+                            <h4>{items[5].title}</h4>
+                            <h5>{items[5].price}원</h5>
+                          </div>
+                          <p>{items[5].content}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <div className='product' onClick={()=>{navigate('/detail/6')}}>
+                      <div className='pro_cont'>
+                        <img className='proImgs' src={process.env.PUBLIC_URL + items[6].url} alt=""/>
+                        <div className='titGroup'>
+                          <div className='itemTit'>
+                            <h4>{items[6].title}</h4>
+                            <h5>{items[6].price}원</h5>
+                          </div>
+                          <p>{items[6].content}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <div className='product' onClick={()=>{navigate('/detail/7')}}>
+                      <div className='pro_cont'>
+                        <img className='proImgs' src={process.env.PUBLIC_URL + items[7].url} alt=""/>
+                        <div className='titGroup'>
+                          <div className='itemTit'>
+                            <h4>{items[7].title}</h4>
+                            <h5>{items[7].price}원</h5>
+                          </div>
+                          <p>{items[7].content}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </SwiperSlide>
+                </Swiper>
+                </>
+              </div>
+            </div>
+          </div>
+
+          
           
           {/* 상품 배너 부분 */}
           <div className='productBanner'>
@@ -214,6 +350,7 @@ function App() {
             </CardGroup>
           </div>
 
+        
           <div className="container">
             <div className="row">
               {
@@ -225,6 +362,8 @@ function App() {
               }
             </div>
           </div>
+
+        
           {
             count < 1 ? 
             <button onClick={()=>{
@@ -241,6 +380,8 @@ function App() {
 
           </>
         } />
+
+        
         {/* <Route path='/detail' element={<Detail items={items}/>} /> 프롭스 */}
         {/* <Route path='*' element={<div>404에러 페이지입니다.</div>} /> */}
         <Route path='/about' element={<About />}>
@@ -250,7 +391,53 @@ function App() {
         <Route path='/detail/:id' element={<Detail items={items} />} />
         {/* <Route path='/' element={<Detail items={items} />} /> */}
       </Routes>
-        
+        {/* 나이키 커뮤니티 부분 */}
+        <div id='nikeComu'>
+          <h3>나이키 커뮤니티와 함께 하기</h3>
+            <CardGroup>
+              <Card className='widthImg'>
+                <Card.Img className='nikeImg1' variant="top" src="holder.js/100px160" />
+                <Card.Body>
+                  <Card.Title>Card title</Card.Title>
+                  <Card.Text>
+                    This is a wider card with supporting text below as a natural lead-in
+                    to additional content. This content is a little bit longer.
+                  </Card.Text>
+                </Card.Body>
+                <Card.Footer>
+                  <small className="text-muted">Last updated 3 mins ago</small>
+                </Card.Footer>
+              </Card>
+              <Card className='widthImg'>
+                <Card.Img className='nikeImg2' variant="top" src="holder.js/100px160" />
+                <Card.Body>
+                  <Card.Title>Card title</Card.Title>
+                  <Card.Text>
+                    This card has supporting text below as a natural lead-in to
+                    additional content.{' '}
+                  </Card.Text>
+                </Card.Body>
+                <Card.Footer>
+                  <small className="text-muted">Last updated 3 mins ago</small>
+                </Card.Footer>
+              </Card>
+              <Card className='widthImg'>
+                <Card.Img className='nikeImg3' variant="top" src="holder.js/100px160" />
+                <Card.Body>
+                  <Card.Title>Card title</Card.Title>
+                  <Card.Text>
+                    This is a wider card with supporting text below as a natural lead-in
+                    to additional content. This card has even longer content than the
+                    first to show that equal height action.
+                  </Card.Text>
+                </Card.Body>
+                <Card.Footer>
+                  <small className="text-muted">Last updated 3 mins ago</small>
+                </Card.Footer>
+              </Card>
+            </CardGroup>
+          </div>
+
     </div>
   );
 }
