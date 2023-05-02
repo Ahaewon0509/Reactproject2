@@ -259,6 +259,61 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light{
 }
 #cardGroup{}
 
+/* 신발 상품 배너 부분 */
+#shoesCards{
+  width: 100%;
+  max-width: 1650px;
+  margin: 0 auto;
+}
+#shoesCards .shoesBanner{
+  width: 100%;
+  height: 900px;
+  background-image: url('../public/img/banner3.webp');
+  background-size: cover;
+}
+#shoesGroup{
+  border: none;
+  margin-bottom: 100px;
+  padding-top: 50px;
+}
+#shoesGroup .shoesTit01{
+  font-size: 0.95em;
+  font-weight: 600;
+}
+#shoesGroup .shoesTit02{
+  font-size: 3em;
+  font-weight: 700;
+  line-height: 47px;
+  margin-bottom: 45px;
+}
+#shoesGroup .shoesSubTit{
+  font-size: 0.93em;
+  line-height: 26px;
+  font-weight: 600;
+}
+#shoesGroup .shoesBtns{
+  display: flex;
+  justify-content: center;
+  padding: 45px 0 45px 0;
+}
+#shoesGroup .shoesBtns .btns{
+  display: shoesBtns;
+  padding: 10px 25px;
+  background: #111;
+  color: #fff;
+  font-size: 0.9em;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+#shoesGroup .shoesBtns .btns:hover{
+  background: #757575;
+}
+#shoesGroup .shoesText{
+  padding: 0;
+}
+
+
 /* 메인 상품 배너 */
 .productBanner{
   width: 100%;
@@ -449,40 +504,177 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light{
 
 /* 나이키 커뮤니티 부분 */
 #nikeComu{
-  padding: 200px 0;
-}
-#nikeComu .widthImg{
-  height: 760px;
-}
-#nikeComu .card-group{
+  padding: 95px 0;
   width: 100%;
   max-width: 1650px;
   margin: 0 auto;
+}
+#nikeComu h2{
+  text-align: left;
+  font-size: 1.6em;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+#nikeComu .widthImg{
+  height: 675px;
+  border: none;
+}
+#nikeComu .card-group{
   gap: 10px;
 }
 #nikeComu .nikeImg1{
   background-image: url('../public/img/nike00.webp');
   width: 100%;
-  height: 760px;
-  background-size: contain;
+  height: 500px;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 #nikeComu .nikeImg2{
   background-image: url('../public/img/nike01.webp');
   width: 100%;
-  height: 760px;
-  background-size: contain;
+  height: 500px;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 #nikeComu .nikeImg3{
   background-image: url('../public/img/nike02.webp');
   width: 100%;
-  height: 760px;
-  background-size: contain;
+  height: 500px;
+  background-size: cover;
   background-repeat: no-repeat;
 }
-#nikeComu{}
-#nikeComu{}
-#nikeComu{}
-#nikeComu{}
-#nikeComu{}
+#nikeComu .nikeCard{
+  text-align: left;
+  padding: 0;
+}
+#nikeComu .nikeBtn{
+  display: block;
+  padding: 8px 8px;
+  width: 105px;
+  text-align: center;
+  background: #000;
+  color: #fff;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 800;
+  transition: 0.3s;
+}
+#nikeComu .nikeBtn:hover{
+  background: #757575;
+}
+#nikeComu .nikeTit{
+  font-size: 20px;
+  line-height: 25px;
+  font-weight: 700;
+  margin-top: 22px;
+}
+#nikeComu .nikeSubTit{
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 500;
+  margin-bottom: 25px;
+}
+
+/* 옷 설명 부분 */
+#clothesGroup{
+  width: 100%;
+  max-width: 1650px;
+  margin: 0 auto;
+  padding: 150px 0;
+}
+#clothesGroup h2{
+  text-align: left;
+  font-size: 1.9em;
+  margin-bottom: 25px;
+}
+#clothesGroup .proGroup{
+  width: 100%;
+  height: 500px;
+}
+#clothesGroup .clothesImg01{
+  width: 100%;
+  height: 100%;
+  background-image: url('../public/img/nikePro00.webp');
+  background-size: cover;
+  position: relative;
+}
+#clothesGroup .clothesImg02{
+  width: 100%;
+  height: 100%;
+  background-image: url('../public/img/nikePro01.webp');
+  background-size: cover;
+  position: relative;
+}
+#clothesGroup .clothesImg03{
+  width: 100%;
+  height: 100%;
+  background-image: url('../public/img/nikePro02.webp');
+  background-size: cover;
+  position: relative;
+}
+#clothesGroup .clothesCard{
+  position: absolute;
+  bottom: 10px;
+  left: 18px;
+}
+#clothesGroup .clothesTit{
+  font-size: 1em;
+  font-weight: 600;
+  color: #fff;
+}
+#clothesGroup .card-group{
+  gap: 10px;
+}
+
+/* 푸터 부분 */
+#footer{
+  background: #ccc;
+}
+#footer .footerWrap{
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 35px 0 20px 0;
+}
+#footer .d-flex{
+  width: 100%;
+  text-align: left;
+}
+#footer .footerUtill{
+  padding-bottom: 15px;
+  border-bottom: 1px solid #000;
+}
+#footer .newInfo{
+  width: 70%;
+}
+#footer .newInfo li{
+  width: 35%;
+}
+#footer .newInfo .col01{
+  gap: 13px;
+}
+#footer .newInfo .col01 li{
+  font-size: 15px;
+}
+#footer .newInfo{}
+
+#footer .info01{
+  gap: 30px;
+}
+#footer .info01 ul li{
+  font-size: 13px;
+}
+#footer .info02{
+  gap: 20px;
+}
+#footer .info02 li{
+  font-size: 13px;
+}
+#footer .snsFlex{
+  gap: 20px;
+}
+#footer .callGroup{
+  gap: 20px;
+}
+#footer{}
+#footer{}

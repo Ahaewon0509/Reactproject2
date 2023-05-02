@@ -1,23 +1,18 @@
-import React, { useState } from 'react';
-import data from '../data.js';
-import List from '../Component/List.js';
-import axios from 'axios';
-import { Routes, Route} from "react-router-dom";
+import React from 'react';
+import { Link, Outlet } from "react-router-dom";
 import '../App.css';
 
-const About = () => {
-    let [items, setItems] = useState(data);
-    let count = 0;
+const Community = () => {
 
     return(
         <>
-        {/* <div className='clickNav'>
-            {/* 회사정보 
-            <Link to={'/about/notice'}>notice board</Link>
-            <Link to={'/about/event'}>evnet</Link>
+        <div className='clickNav'>
+            {/* 회사정보  */}
+            <Link to={'/community/notice'}>notice board</Link>
+            <Link to={'/community/event'}>evnet</Link>
             <Outlet></Outlet>
-        </div> */}
-        <Routes>
+        </div>
+        {/* <Routes>
             <Route path='/' element={
                 <>
                 <div id='aboutProduct'>
@@ -49,9 +44,9 @@ const About = () => {
                 </>
             }>
             </Route>
-        </Routes>
-            
+        </Routes> */}
         </>
+
     )
 }
-export default About;
+export default Community;
