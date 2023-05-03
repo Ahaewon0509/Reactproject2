@@ -48,7 +48,7 @@ const Detail = (props) => {
             <div className="proWrap">
                 <div className="row produFlex">
                     <div className="col-md-6 proIndex">
-                        <img src={process.env.PUBLIC_URL + '/img/item0'+props.items[id].id+'.webp'} alt="" />
+                        <img className="image" src={process.env.PUBLIC_URL + '/img/item0'+props.items[id].id+'.webp'} alt="" />
                     </div>
                     <div className="col-md-6 proIndex2">
                         <h4 className="pt-5">{props.items[id].title}</h4>
@@ -118,15 +118,15 @@ const Detail = (props) => {
                                     <h2>{props.items[id].productTitle00}</h2>
                                     <p>{props.items[id].productInfo}</p>
                                 </div>
-                                <div className="infoGroup02">
+                                <div className="infoGroup">
                                     <h2>{props.items[id].productTitle01}</h2>
                                     <p>{props.items[id].productGood01}</p>
                                 </div>
-                                <div className="infoGroup03">
+                                <div className="infoGroup">
                                     <h2>{props.items[id].productTitle02}</h2>
                                     <p>{props.items[id].productGood02}</p>
                                 </div>
-                                <div className="infoGroup04">
+                                <div className="infoGroup">
                                     <h2>{props.items[id].productTitle03}</h2>
                                     <ul>
                                         <li><p>{props.items[id].proInfo01}</p></li>
@@ -135,11 +135,15 @@ const Detail = (props) => {
                                         <li><p>{props.items[id].proInfo04}</p></li>
                                     </ul>
                                 </div>
-                                <div className="infoGroup05">
+                                <div className="infoGroup">
                                     <h2>{props.items[id].historyTit}</h2>
                                     <p>{props.items[id].history}</p>
                                 </div>
+                            {/* <div className="closeBtn">
+                                <p className="xi-close"></p>
+                            </div> */}
                             </Modal>
+
                         </div>
                         <div id="accInfo">
                             <Accordion>
@@ -192,7 +196,8 @@ const Detail = (props) => {
                 </div>
                 {/* 상품 상세페이지 */}
                 <div id="proImgInfo">
-                    <div className="">
+                    <h2>Product Information</h2>
+                    <div className="cardGroup">
                         <Card>
                             <Card.Img variant="top" src={props.items[id].infoImg01} />
                             <Card.Body>
