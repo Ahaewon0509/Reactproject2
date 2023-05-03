@@ -197,6 +197,9 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light{
   line-height: 20px;
   margin-bottom: 4px;
 }
+.carousel-control-next, .carousel-control-prev{
+  z-index: 0 !important;
+}
 /* 배너 네비게이션 아이콘 */
 .carousel-indicators{
   display: none;
@@ -319,7 +322,7 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light{
   width: 100%;
   max-width: 1650px;
   margin: 0 auto;
-  padding: 150px 0 150px 0;
+  padding: 150px 0 85px 0;
 }
 .productBanner .productImg{
   background-image: url('../public/img/product_banner01.webp');
@@ -580,7 +583,7 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light{
   width: 100%;
   max-width: 1650px;
   margin: 0 auto;
-  padding: 150px 0;
+  padding: 100px 0 75px 0;
 }
 #clothesGroup h2{
   text-align: left;
@@ -626,9 +629,230 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light{
   gap: 10px;
 }
 
+/* 상세페이지 부분 */
+.proWrap{
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 100px 0;
+}
+.proWrap .produFlex{
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+.proWrap .proIndex{
+  width: 55%;
+}
+.proWrap .proIndex2{
+  width: 40%;
+  text-align: left;
+  margin-top: -45px;
+}
+.proWrap .proIndex2 h4{
+  font-size: 25px;
+  font-weight: 600;
+}
+.proWrap .proIndex2 .proType{
+  font-size: 15px;
+  color: #992d00;
+  font-weight: 800;
+  line-height: 20px;
+}
+.proWrap .proIndex2 .proTypePrice{
+  font-size: 17px;
+  font-weight: 600;
+}
+
+/* 사이즈 선택 */
+#size{
+  margin-top: 28px;
+}
+#size .sizeClick{
+  margin: 15px 0;
+}
+#size .sizeGroup{
+  display: flex;
+  gap: 5px;
+}
+#size .sizeBtn{
+  padding: 13px 28px;
+  display: block;
+  border: 1px solid #e5e5e5;
+  border-radius: 5px;
+  color: #111;
+}
+#size .sizeBtn:hover{
+  border-color: #111;
+}
+#size .sizeClick > ul{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+#size{}
+#size{}
+#size{}
+
+/* 주문 버튼 */
+#orderBtn{
+  margin: 15px 0;
+}
+#orderBtn .buyBtn{
+  width: 100%;
+  padding: 15px;
+  border-radius: 30px;
+  background: #111;
+  border: none;
+  font-weight: 800;
+}
+#orderBtn .buyBtn:hover{
+  background: #707072;
+}
+
+#orderBtn .buyBtn2{
+  width: 100%;
+  padding: 15px;
+  border-radius: 30px;
+  background: #fff;
+  color: #111;
+  font-weight: 800;
+  border-color: #cacacb;
+}
+#orderBtn .buyBtn2:hover{
+  border-color: #111;
+}
+#orderBtn ul{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+#orderBtn{}
+#orderBtn{}
+#orderBtn{}
+#orderBtn{}
+
+
+/* 상품 추가 설명 부분 */
+#plusInfo .pInfo{
+  line-height: 26px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 40px;
+}
+#plusInfo ul{
+  list-style: inside;
+}
+#plusInfo ul li{
+  line-height: 26px;
+  font-size: 14px;
+  font-weight: 600;
+}
+#plusInfo{}
+
+
+/* 상품 상세 모달 팝업 부분 */
+#modalPop{
+  margin: 15px 0;
+}
+#modalPop button{
+  border: none;
+  background: transparent;
+  padding-bottom: 1px;
+  border-bottom: 1px solid #111;
+  font-size: 13px;
+  font-weight: 600;
+}
+#modalPop button:hover{
+  color: #707072;
+}
+#modalPop{}
+#modalPop{}
+#modalPop{}
+#modalPop{}
+#modalPop{}
+
+/* 주문 상세 설명 아코디언 부분 */
+#accInfo{
+  margin-top: 35px;
+}
+#accInfo .accordion-item:first-of-type{
+  border: none;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+  border-radius: 0;
+}
+#accInfo .accordion-item:last-of-type .accordion-button.collapsed{
+  border: none;
+  border-bottom: 1px solid #e5e5e5;
+  border-radius: 0;
+  padding: 20px 5px;
+  font-size: 15px;
+  font-weight: 700;
+}
+#accInfo .accordion-item:first-of-type .accordion-button{
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  padding: 20px 5px;
+  font-size: 15px;
+  font-weight: 700;
+}
+#accInfo .accordion-item:last-of-type{
+  border: none;
+}
+#accInfo .accordion-button:not(.collapsed){
+  color: #111;
+  background: transparent;
+  padding: 20px 5px;
+  font-size: 15px;
+  font-weight: 700;
+}
+#accInfo .accordion-button:focus{
+  box-shadow: none;
+}
+#accInfo .accordion-item:last-of-type .accordion-collapse{
+  border-bottom: 1px solid #e5e5e5;
+  border-radius: 0;
+}
+#accInfo .boxGroup > ul > li{
+  line-height: 30px;
+  font-size: 15px;
+  font-weight: 500;
+}
+#accInfo .boxGroup > ul > li strong{
+  text-decoration: underline;
+  font-weight: 800;
+}
+#accInfo .sizeBody{
+  font-size: 15px;
+  font-weight: 500;
+}
+#accInfo{}
+#accInfo{}
+
+
+
+/* 상품 상세페이지 부분 */
+#proImgInfo{}
+#proImgInfo{}
+#proImgInfo {}
+#proImgInfo{}
+#proImgInfo{}
+#proImgInfo{}
+#proImgInfo{}
+#proImgInfo{}
+#proImgInfo{}
+
+
+
+
+
+
+
 /* 푸터 부분 */
 #footer{
-  background: #ccc;
+  background: #111;
+  margin-top: 100px;
 }
 #footer .footerWrap{
   width: 100%;
@@ -641,31 +865,58 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light{
   text-align: left;
 }
 #footer .footerUtill{
-  padding-bottom: 15px;
-  border-bottom: 1px solid #000;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #7e7e7e;
 }
 #footer .newInfo{
   width: 70%;
 }
 #footer .newInfo li{
-  width: 35%;
+  width: 36%;
 }
 #footer .newInfo .col01{
   gap: 13px;
 }
-#footer .newInfo .col01 li{
+
+#footer .newInfo .col01 .infoMa_Tit{
+  display: block;
+  color: #fff;
   font-size: 15px;
+}
+#footer .newInfo .col01 .infoSub_Tit{
+  display: block;
+  color: #7e7e7e;
+  font-size: 13px;
+}
+#footer .newInfo .col01 .infoSub_Tit:hover{
+  color: #fff;
 }
 #footer .newInfo{}
 
 #footer .info01{
   gap: 30px;
 }
-#footer .info01 ul li{
+#footer .info01 .kr svg{
+  margin-right: 10px;
+}
+#footer .info01 .kr{
+  color: #fff;
+}
+#footer .info01 li{
   font-size: 13px;
+  color: #7e7e7e;
 }
 #footer .info02{
   gap: 20px;
+}
+footer .info02 .foNav{
+  color: #7e7e7e;
+}
+footer .info02 .foNav:hover{
+  color: #fff;
+}
+footer .info02 .foNav2{
+  color: #fff;
 }
 #footer .info02 li{
   font-size: 13px;
@@ -673,8 +924,32 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light{
 #footer .snsFlex{
   gap: 20px;
 }
+#footer .snsFlex li svg{
+  transition: 0.6s;
+}
+#footer .snsFlex li:hover svg{
+  fill: #fff;
+}
 #footer .callGroup{
   gap: 20px;
 }
-#footer{}
+#footer .callGroup .nikeInfo li{
+  color: #7e7e7e;
+}
+#footer .callGroup .nikeInfo li strong{
+  color: #fff;
+  text-decoration: underline;
+  opacity: 0.7;
+}
+#footer .callGroup .nikeInfo li strong:hover{
+  opacity: 1;
+}
+#footer .footerInfo03 .nikeInfo{
+  margin-top: 20px;
+  gap: 8px;
+}
+#footer .footerInfo03 .nikeInfo li{
+  font-size: 13px;
+  line-height: 22px;
+}
 #footer{}
