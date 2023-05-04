@@ -1,15 +1,28 @@
 import React from 'react';
-import { Link, Outlet } from "react-router-dom";
+import { Link, Outlet, Routes, Route } from "react-router-dom";
 import '../App.css';
 
 const Community = () => {
 
     return(
         <>
+        <Routes>
+            <Route path='/' element={
+                <>
+                <div className='comTit'>
+                    <h2>나이키에 대해 궁금한 점은?</h2>
+                    <p>클릭 한 번으로 고객센터, 이벤트를 확인할 수 있습니다.</p>
+                </div>
+                </>
+            }>
+            </Route>
+        </Routes>
         <div className='clickNav'>
             {/* 회사정보  */}
-            <Link to={'/community/notice'}>notice board</Link>
-            <Link to={'/community/event'}>evnet</Link>
+            <ul>
+                <li><Link to={'/community/notice'} className='navClickBtn'>고객센터</Link></li>
+                <li><Link to={'/community/event'} className='navClickBtn'>사이즈 가이드</Link></li>
+            </ul>
             <Outlet></Outlet>
         </div>
         {/* <Routes>

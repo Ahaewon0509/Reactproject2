@@ -82,8 +82,8 @@ function App() {
               
               <Nav className="me-auto my-2 my-lg-0" style={{ maxHeight: '120px' }} navbarScroll>
                 <Nav.Link onClick={()=>{navigate('/')}} className='navText'>Main</Nav.Link>
-                <Nav.Link onClick={()=>{navigate('/detail/0')}} className='navText'>Detail</Nav.Link>
-                <Nav.Link onClick={()=>{navigate('/about')}} className='navText'>About</Nav.Link>
+                <Nav.Link onClick={()=>{navigate('/detail/0')}} className='navText'>Shoes</Nav.Link>
+                <Nav.Link onClick={()=>{navigate('/about')}} className='navText'>Product List</Nav.Link>
                 <Nav.Link onClick={()=>{navigate('/community')}} className='navText'>Community</Nav.Link>
 
                 {/* <Nav.Link onClick={()=>{navigate('/community/notice')}} className='navText'>notice</Nav.Link>
